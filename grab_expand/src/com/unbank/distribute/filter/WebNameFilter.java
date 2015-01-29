@@ -1,0 +1,25 @@
+package com.unbank.distribute.filter;
+
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import com.unbank.pipeline.entity.Information;
+
+@Service
+public class WebNameFilter extends DistributeBaseFilter {
+	private String domain = "webName";
+
+	public WebNameFilter() {
+		DistributeFilterLocator.getInstance().register(domain, this);
+	}
+
+	@Override
+	public boolean isPass(Information information, List<String> values) {
+		if (values.contains(information.getWeb_name())) {
+			return true;
+		}
+		return false;
+	}
+
+}

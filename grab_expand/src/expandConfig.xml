@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<duplicate>
+		<fileindex>1</fileindex>
+		<task>2</task>
+		<limitNum>1000</limitNum>
+	</duplicate>
+	<clent>
+		<fileindex>7</fileindex>
+		<task>2</task>
+		<limitNum>1000</limitNum>
+		<doc_ip>10.0.0.41:8080</doc_ip>
+	</clent>
+	<uniq>
+		<white></white>
+	</uniq>
+	<keyword>
+		<keyword_ip>10.0.0.71:9876</keyword_ip>
+
+	</keyword>
+
+</config>

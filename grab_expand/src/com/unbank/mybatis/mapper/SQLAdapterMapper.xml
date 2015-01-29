@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.unbank.mybatis.mapper.SQLAdapterMapper">
+
+	<!--智能编辑平台的doc 库 -->
+	<insert id="insertPdfDoc" parameterType="SQLAdapter">
+		${sql} (
+		<foreach item="item" index="key" collection="obj" open=""
+			separator="," close="">${key}</foreach>
+		) values (
+		<foreach item="item" index="key" collection="obj" open=""
+			separator="," close=""> #{item}</foreach>
+		)
+
+	</insert>
+	<insert id="insertPdfDocText" parameterType="SQLAdapter">
+		${sql} (
+		<foreach item="item" index="key" collection="obj" open=""
+			separator="," close="">${key}</foreach>
+		) values (
+		<foreach item="item" index="key" collection="obj" open=""
+			separator="," close=""> #{item}</foreach>
+		)
+
+	</insert>
+	<select id="executeSQL" parameterType="com.unbank.mybatis.entity.SQLAdapter">
+		${sql}
+	</select>
+	<select id="selectMaxId" resultType="java.lang.Integer"
+		parameterType="com.unbank.mybatis.entity.SQLAdapter">
+		${sql}
+	</select>
+
+	<select id="selectInformationByTaskAndFieldIndex" resultType="com.unbank.pipeline.entity.Information"
+		parameterType="com.unbank.mybatis.entity.SQLAdapter">
+		${sql}
+	</select>
+
+
+	<select id="selectTempRelation" resultType="com.unbank.classify.entity.TempRelation"
+		parameterType="com.unbank.mybatis.entity.SQLAdapter">
+		${sql}
+	</select>
+
+
+	<insert id="insertInformation" parameterType="SQLAdapter">
+		<selectKey resultType="java.lang.Integer" keyProperty="prikey"
+			order="AFTER">
+			SELECT LAST_INSERT_ID()
+		</selectKey>
+
+		${sql} (
+		<foreach item="item" index="key" collection="obj" open=""
+			separator="," close="">${key}</foreach>
+		) values (
+		<foreach item="item" index="key" collection="obj" open=""
+			separator="," close=""> #{item}</foreach>
+		)
+
+	</insert>
+
+
+
+
+
+	<insert id="updateFileIndex" parameterType="SQLAdapter">
+
+		<foreach collection="list" item="item" index="index" open=""
+			close="" separator=";">
+			update ptf_crawl
+			<set>
+				file_index=1
+			</set>
+			where crawl_id = ${item}
+		</foreach>
+	</insert>
+
+</mapper>

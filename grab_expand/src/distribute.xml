@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<platforms>
+
+	<platform id="intelltest" ip="10.0.0.41">
+		<fields>
+			<ptf_crawl>
+				<crawl_id>crawl_id</crawl_id>
+				<website_id>website_id</website_id>
+				<crawl_title>crawl_title</crawl_title>
+				<crawl_brief>crawl_brief</crawl_brief>
+				<crawl_views>crawl_views</crawl_views>
+				<web_name>web_name</web_name>
+				<url>url</url>
+				<file_index>file_index</file_index>
+				<news_time>news_time</news_time>
+				<crawl_time>crawl_time</crawl_time>
+				<task>task</task>
+			</ptf_crawl>
+			<ptf_crawl_text>
+				<crawl_id>crawl_id</crawl_id>
+				<text>text</text>
+			</ptf_crawl_text>
+			<intell_pdf_doc></intell_pdf_doc>
+		</fields>
+		<filter>
+			<webName></webName>
+			<noNeedWebName></noNeedWebName>
+			<keyword></keyword>
+			<noNeedKeyWord></noNeedKeyWord>
+			<website></website>
+			<noNeedWebsiteId>5744</noNeedWebsiteId>
+			<sendType></sendType>
+		</filter>
+
+	</platform>
+	<platform id="ubkkaptest" ip="10.0.2.122">
+		<fields>
+			<ptf_crawl>
+				<crawl_id>crawl_id</crawl_id>
+				<website_id>website_id</website_id>
+				<crawl_title>crawl_title</crawl_title>
+				<crawl_brief>crawl_brief</crawl_brief>
+				<crawl_views>crawl_views</crawl_views>
+				<web_name>web_name</web_name>
+				<url>url</url>
+				<file_index>file_index</file_index>
+				<news_time>news_time</news_time>
+				<crawl_time>crawl_time</crawl_time>
+				<task>task</task>
+			</ptf_crawl>
+			<ptf_crawl_text>
+				<crawl_id>crawl_id</crawl_id>
+				<text>text</text>
+			</ptf_crawl_text>
+		</fields>
+	</platform>
+	<platform id="spidertest" ip="10.0.2.26">
+		<fields>
+			<ptf_crawl>
+				<crawl_id>crawl_id</crawl_id>
+				<website_id>website_id</website_id>
+				<crawl_title>crawl_title</crawl_title>
+				<crawl_brief>crawl_brief</crawl_brief>
+				<crawl_views>crawl_views</crawl_views>
+				<web_name>web_name</web_name>
+				<url>url</url>
+				<file_index>file_index</file_index>
+				<news_time>news_time</news_time>
+				<crawl_time>crawl_time</crawl_time>
+				<task>task</task>
+			</ptf_crawl>
+			<ptf_crawl_text>
+				<crawl_id>crawl_id</crawl_id>
+				<text>text</text>
+			</ptf_crawl_text>
+			<intell_pdf_doc></intell_pdf_doc>
+		</fields>
+	</platform>
+</platforms>
